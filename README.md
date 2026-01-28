@@ -17,13 +17,8 @@ A comprehensive Terraform project demonstrating cross-region VPC peering between
 - [Testing](#testing)
 - [Traffic Flow Examples](#traffic-flow-examples)
 - [LocalStack vs AWS](#localstack-vs-aws)
-- [Security Considerations](#security-considerations)
 - [Troubleshooting](#troubleshooting)
 - [Cleanup](#cleanup)
-- [Cost Estimation](#cost-estimation)
-- [Best Practices](#best-practices)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## 🎯 Overview
 

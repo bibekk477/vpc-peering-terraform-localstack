@@ -20,7 +20,7 @@ A comprehensive Terraform project demonstrating cross-region VPC peering between
 - [Troubleshooting](#troubleshooting)
 - [Cleanup](#cleanup)
 
-## 🎯 Overview
+## Overview
 
 This project creates a complete multi-region VPC peering setup using Terraform and LocalStack. It demonstrates:
 
@@ -34,7 +34,7 @@ This project creates a complete multi-region VPC peering setup using Terraform a
 **Environment:** Staging  
 **Mode:** LocalStack (Local AWS Emulation) with AWS deployment option
 
-## 🏗️ Architecture
+## Architecture
 
 ### High-Level Architecture Diagram
 
@@ -88,7 +88,7 @@ This project creates a complete multi-region VPC peering setup using Terraform a
                       (http://localhost:4566)
 ```
 
-## ✨ Features
+## Features
 
 - 🌐 **Multi-Region Deployment**: Resources across us-east-1 and us-west-2
 - 🔗 **VPC Peering**: Private communication between VPCs
@@ -148,7 +148,7 @@ Expected response:
 }
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 terraform-vpc-peering/
@@ -163,7 +163,7 @@ terraform-vpc-peering/
 └── .gitignore                   # Git ignore patterns
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Step 1: Clone and Navigate
 
@@ -527,7 +527,7 @@ echo "<p> Private IP: $(hostname -I)</p>" >> /var/www/html/index.html
 
 ---
 
-## 🎮 Usage
+## Usage
 
 ### Basic Commands
 
@@ -579,7 +579,7 @@ terraform import aws_vpc.primary_vpc vpc-xxxxx
 terraform state rm aws_instance.primary_ec2
 ```
 
-## 📤 Outputs
+## Outputs
 
 After successful deployment:
 
@@ -639,7 +639,7 @@ PRIMARY_IP=$(terraform output -raw primary_instance_public_ip)
 curl http://$PRIMARY_IP
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Test 1: Verify Resource Creation
 
@@ -700,7 +700,7 @@ aws --endpoint-url=http://localhost:4566 ec2 describe-route-tables \
   --output table
 ```
 
-## 🔀 Traffic Flow Examples
+## Traffic Flow Examples
 
 ### Internet Access (SSH from your computer)
 
@@ -774,7 +774,7 @@ Primary EC2                    Secondary EC2
    Primary:22 → VPC Peering → Secondary:22
 ```
 
-## 🔄 LocalStack vs AWS
+## LocalStack vs AWS
 
 ### Current Setup: LocalStack
 
@@ -914,7 +914,7 @@ curl http://$(terraform output -raw secondary_instance_private_ip)
 ssh ec2-user@$(terraform output -raw secondary_instance_private_ip)
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### LocalStack Issues
 
@@ -1148,7 +1148,7 @@ primary_vpc_cidr   = "172.16.0.0/16"
 secondary_vpc_cidr = "172.17.0.0/16"
 ```
 
-## 🧹 Cleanup
+## Cleanup
 
 ### Destroy All Resources
 
